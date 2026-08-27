@@ -1,0 +1,31 @@
+{
+  "name": "kisstoy-multi-device-mcp",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Safety-first multi-device MCP server for Kisstoy remote-control sessions.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsc -p tsconfig.json && node --watch dist/src/index.js",
+    "start": "node dist/src/index.js",
+    "start:stdio": "node dist/src/index.js --stdio",
+    "test": "tsc -p tsconfig.json && node --test \"dist/test/*.test.js\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "dotenv": "^17.4.2",
+    "express": "latest",
+    "ws": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "@types/ws": "latest",
+    "typescript": "latest"
+  }
+}
